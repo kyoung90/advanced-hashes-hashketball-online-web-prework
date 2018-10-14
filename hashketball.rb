@@ -211,14 +211,18 @@ def winning_team
       else
         score +=  player_data[:points]
       end 
+    end 
       team_scores.push(score)
       score = 0
-    end 
   end 
   
   if team_scores[0] > team_scores[1]
-    
-  elsif team_scores[1] < team_scores[]
+    return game_hash.  
+  elsif team_scores[0] < team_scores[1]
+  
+  else
+  
+  end
   
 end 
 
