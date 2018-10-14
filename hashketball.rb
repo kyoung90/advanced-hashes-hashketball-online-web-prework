@@ -244,25 +244,6 @@ def player_with_longest_name
   return name
 end 
 
-def player_with_longest_name
-  highest_name_length = nil
-  name = nil
-  
-  game_hash.each do |location, team_data|
-      player_name_and_length = {}
-    team_data[:players].each do |player_name, player_data|
-      if highest_name_length == nil
-        highest_name_length = player_name.to_s.length
-        name = player_name.to_s
-      elsif highest_name_length < player_name.to_s.length
-         highest_name_length = player_name.to_s.length
-         name = player_name.to_s
-      end 
-    end 
-  end 
-  
-  return name
-end 
 
 def long_name_steals_a_ton?
   
