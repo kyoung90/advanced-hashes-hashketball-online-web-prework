@@ -202,8 +202,9 @@ def most_points_scored
 end 
 
 def winning_team
-  team_scores - []
+  team_scores = {}
   score = nil
+  
   game_hash.each do |location, team_data|
     team_data[:players].each do |player_name, player_data|
       if score == nil
