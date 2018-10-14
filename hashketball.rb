@@ -220,8 +220,6 @@ def winning_team
       score = 0
   end 
   
-  puts team_array
-  
   team_array[0][:score] > team_array[1][:score] ? team_array[0][:team_name] : team_array[1][:team_name]
   
 end 
