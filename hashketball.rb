@@ -225,25 +225,23 @@ def winning_team
 end 
 
 def player_with_longest_name
-  player_array = []
   highest_name_length = nil
+  name = nil
   
   game_hash.each do |location, team_data|
       player_name_and_length = {}
     team_data[:players].each do |player_name, player_data|
       if highest_name_length == nil
         highest_name_length = player_name.to_s.length
-      elsif highest_name_length < player_name
-         +=  player_data[:points]
+        name = player_name.to_s
+      elsif highest_name_length < player_name.to_s.length
+         highest_name_length = player_name.to_s.length
+         name = player_name.to_s
       end 
     end 
-      team_scores[:team_name] = team_data[:team_name]
-      team_scores[:score] = score
-      team_array.push(team_scores)
-      score = 0
   end 
   
-  team_array[0][:score] > team_array[1][:score] ? team_array[0][:team_name] : team_array[1][:team_name]
+  return name
 end 
 
 
