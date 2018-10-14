@@ -147,10 +147,16 @@ def team_names
   game_hash.each do |location, team_data|
     teams.push(team_data[:team_name])
   end 
-  
   return teams
 end 
 
+def team_colors(team_name)
+  game_hash.each do |location, team_data|
+    if team_data.has_value?(team_name)
+      return team_data[:colors]
+    end 
+  end 
+end 
 
 
 
