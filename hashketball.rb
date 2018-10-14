@@ -2,11 +2,26 @@
 def game_hash
   game = {
     home: {
+      team_name: "team_name",
+      colors: ["team_colors"],
+      players: {
+        "player_name": {
+          number: ,
+          shoe: ,
+          points: ,
+          rebounds: ,
+          assists: ,
+          steals: ,
+          blocks: ,
+          slam_dunks: ,
+        }
+      }
+    }
+    away: {
       team_name:,
       colors:,
       players:
     }
-    away:
   }
 end 
 
