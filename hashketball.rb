@@ -199,7 +199,6 @@ def most_points_scored
     end 
   end 
   return highest_score
-  
 end 
 
 
