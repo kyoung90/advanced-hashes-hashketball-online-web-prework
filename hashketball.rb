@@ -262,6 +262,9 @@ def long_name_steals_a_ton?
     end 
   end 
   
-  team_array[0][:score] > team_array[1][:score] ? team_array[0][:team_name] : team_array[1][:team_name]
+  if player_with_longest_name == name
+    return true
+  else 
+    return false
 end 
 
