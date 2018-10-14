@@ -118,7 +118,12 @@ def game_hash
   return game
 end 
 
-def 
+def num_points_scored(player_name)
+  game.each do |location, team_data|
+      return team_data["players"][player_name]["points"]
+    
+  end 
+end 
 
 
 
