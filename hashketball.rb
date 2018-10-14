@@ -246,24 +246,20 @@ end
 
 
 def long_name_steals_a_ton?
-  player_array = []
   steals = nil
   name = nil
   
   game_hash.each do |location, team_data|
-      player_steals = {}
+
     team_data[:players].each do |player_name, player_data|
       if steals == nil
         steals =  player_data[:steals]
         name = player_name.to_s
       elsif steals < player_data[:steals]
         steals =  player_data[:steals]
+        name = player_name.to_s
       end 
     end 
-      team_scores[:team_name] = team_data[:team_name]
-      team_scores[:score] = score
-      team_array.push(team_scores)
-      score = 0
   end 
   
   team_array[0][:score] > team_array[1][:score] ? team_array[0][:team_name] : team_array[1][:team_name]
