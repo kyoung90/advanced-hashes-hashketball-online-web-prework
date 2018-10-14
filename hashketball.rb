@@ -217,13 +217,8 @@ def winning_team
       score = 0
   end 
   
-  if team_scores[0] > team_scores[1]
-    return team_sco
-  elsif team_scores[0] < team_scores[1]
   
-  else
-  
-  end
+  team_scores.values
   
 end 
 
