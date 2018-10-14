@@ -202,6 +202,7 @@ def most_points_scored
 end 
 
 def winning_team
+  team_array = []
   team_scores = {}
   score = nil
   
@@ -213,7 +214,10 @@ def winning_team
         score +=  player_data[:points]
       end 
     end 
-      team_scores["#{team_data[:team_name]}"] = score
+      team_scores[:team_name] = team_data[:team_name]
+      team_scores[:score] = score
+      team_array.push(team_scores)
+      team_scores.clear
       score = 0
   end 
   
