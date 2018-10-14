@@ -132,7 +132,6 @@ def shoe_size(player_name)
       return team_data[:players][player_name][:shoe]
     end 
   end 
-
 end 
 
 
