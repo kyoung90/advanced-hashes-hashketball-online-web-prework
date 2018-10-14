@@ -203,10 +203,10 @@ end
 
 def winning_team
   team_array = []
-  team_scores = {}
   score = nil
   
   game_hash.each do |location, team_data|
+      team_scores = {}
     team_data[:players].each do |player_name, player_data|
       if score == nil
         score =  player_data[:points]
@@ -217,7 +217,6 @@ def winning_team
       team_scores[:team_name] = team_data[:team_name]
       team_scores[:score] = score
       team_array.push(team_scores)
-      team_scores.clear
       score = 0
   end 
   
