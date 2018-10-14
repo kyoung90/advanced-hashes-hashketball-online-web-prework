@@ -221,7 +221,7 @@ def winning_team
   end 
   
   
-  team_scores.values
+  team_array[0][:points] > team_array[1][:points] ? team_array[0][:team_name] : team_array[1][:team_name]
   
 end 
 
