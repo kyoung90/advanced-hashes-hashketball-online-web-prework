@@ -120,9 +120,9 @@ end
 
 def num_points_scored(player_name)
   game.each do |location, team_data|
-    
+    if team_data["players"].has_key?(player_name)
       return team_data["players"][player_name]["points"]
-    
+    end 
   end 
 end 
 
