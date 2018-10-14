@@ -16,7 +16,7 @@ def game_hash
           slam_dunks: 1
         }
       }
-    }
+    },
     away: {
       team_name: "team_name",
       colors: ["team_colors"],
